@@ -8,54 +8,46 @@
 
     <style>
         body {
-            background-color: #000000; /* Fundo preto */
-            color: white; /* Cor do texto padrão para branco */
+            background-color: #000000; /* Cor de fundo de fallback */
+            
+            /* PROPRIEDADES DA IMAGEM DE FUNDO */
+            /* Caminho relativo para a imagem dentro do seu repositório */
+            background-image: url('imagens/VIP ANINHA.jpg'); 
+            background-size: cover; 
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* Opcional: imagem de fundo fixa */
+            
+            color: white; 
             font-family: Arial, sans-serif;
-            margin: 0; /* Remove margens padrão do body */
-            padding: 0; /* Remove padding padrão do body para flexbox de tela cheia */
-
-            /* Configurações para centralizar o conteúdo vertical e horizontalmente */
+            margin: 0;
+            padding: 0;
             display: flex;
-            justify-content: center; /* Centraliza horizontalmente */
-            align-items: center; /* Centraliza verticalmente */
-            min-height: 100vh; /* Ocupa 100% da altura da viewport */
-            width: 100vw; /* Ocupa 100% da largura da viewport */
-            overflow-x: hidden; /* Evita scroll horizontal indesejado */
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            width: 100vw;
+            overflow-x: hidden;
         }
 
         /* Estilos para o componente de tabela de preços do Stripe */
         stripe-pricing-table {
-            width: 100%; /* Ocupa 100% da largura do seu contêiner */
-            max-width: 480px; /* Largura máxima, como você já tinha */
-            border-radius: 8px; /* Cantos arredondados */
-            overflow: hidden; /* Garante que nada transborde da borda arredondada */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar o card */
-            /* Adiciona um padding interno para que o conteúdo não cole nas bordas da tabela */
+            width: 100%;
+            max-width: 480px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
             padding: 20px;
-            box-sizing: border-box; /* Garante que o padding não aumente a largura/altura total */
+            box-sizing: border-box;
+            /* Fundo semi-transparente para a tabela para melhor leitura */
+            background-color: rgba(0, 0, 0, 0.7); 
         }
-
-        /* Se você tiver o seletor "Mensalmente" como um elemento separado (não parte do Stripe),
-           você precisará estilizá-lo. Exemplo para um <select>: */
-        /*
-        .time-period-selector {
-            margin-bottom: 20px;
-            padding: 10px 15px;
-            border-radius: 5px;
-            background-color: #333;
-            color: white;
-            border: 1px solid #555;
-            font-size: 1em;
-            cursor: pointer;
-        }
-        */
-
-        /* Estilos para o conteúdo dentro do stripe-pricing-table que o Stripe não controla */
-        /* Por exemplo, se o título "Mais popular" ou "VIP DA ANINHA (PLANOS)" for texto puro */
+        
+        /* Estilos para o conteúdo dentro do stripe-pricing-table */
         h1, h2, h3, p, span {
-            color: white; /* Garante que o texto dentro da tabela seja legível no fundo escuro */
-            text-align: center; /* Centraliza textos que não são do Stripe */
-            margin-bottom: 10px; /* Adiciona espaço abaixo de títulos/parágrafos */
+            color: white;
+            text-align: center;
+            margin-bottom: 10px;
         }
     </style>
 </head>
