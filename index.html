@@ -1,62 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Pagamento VIP</title>
-    <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pagamento VIP</title>
+  <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
 
-    <style>
-        body {
-            background-color: #000000; /* Cor de fundo de fallback */
-            
-            /* PROPRIEDADES DA IMAGEM DE FUNDO */
-            /* Caminho relativo para a imagem dentro do seu repositório */
-            background-image: url('imagens/VIP ANINHA.jpg'); 
-            background-size: cover; 
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-attachment: fixed; /* Opcional: imagem de fundo fixa */
-            
-            color: white; 
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            width: 100vw;
-            overflow-x: hidden;
-        }
+  <style>
+    body {
+      background-color: #000000;
+      background-image: url('img/vip-aninha.jpg');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
 
-        /* Estilos para o componente de tabela de preços do Stripe */
-        stripe-pricing-table {
-            width: 100%;
-            max-width: 480px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
-            padding: 20px;
-            box-sizing: border-box;
-            /* Fundo semi-transparente para a tabela para melhor leitura */
-            background-color: rgba(0, 0, 0, 0.7); 
-        }
-        
-        /* Estilos para o conteúdo dentro do stripe-pricing-table */
-        h1, h2, h3, p, span {
-            color: white;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-    </style>
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      width: 100vw;
+      overflow-x: hidden;
+    }
+
+    stripe-pricing-table {
+      width: 100%;
+      max-width: 480px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      box-sizing: border-box;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    h1, h2, h3, p, span {
+      color: white;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
 
-    <stripe-pricing-table
-        pricing-table-id="prctbl_1RXsFKLhAe5U7DkXBzGtS8MF"
-        publishable-key="pk_live_51RUZc6LhAe5U7DkX0zAkUTVpNz7xtD7LBhSbz2IY265EFqHn8Sg52PYcVE3K9TGlxdXCYlUkPtsYR50rJ4l1itOA00qrzPUyqo">
-    </stripe-pricing-table>
+  <stripe-pricing-table
+    pricing-table-id="prctbl_1RXsFKLhAe5U7DkXBzGtS8MF"
+    publishable-key="pk_live_51RUZc6LhAe5U7DkX0zAkUTVpNz7xtD7LBhSbz2IY265EFqHn8Sg52PYcVE3K9TGlxdXCYlUkPtsYR50rJ4l1itOA00qrzPUyqo">
+  </stripe-pricing-table>
 
 </body>
 </html>
